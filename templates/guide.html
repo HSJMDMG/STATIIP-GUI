@@ -1,0 +1,480 @@
+{% extends "basic.html" %}
+{% block title %}
+    <title>
+        Guide - StatiipPlatform
+    </title>
+{% endblock %}
+{% block header %}
+    <header>
+        <a class="scroll-point pt-top" name="top"></a>
+        <nav class="navbar navbar-inverse navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+
+              <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="/"><img id="logo_top" src="../static/logo/cordova-logo-newbrand.svg"></a>
+              </div>
+
+
+    </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <div class="nav_bar_center">
+                        <!-- 最上面的一条框-->
+                        <ul class="nav navbar-nav">
+                          <li>
+                              <a href="/">Home</a>
+                          </li>
+                            <li class="active">
+                                <a href="/guide">Guide</a>
+                            </li>
+                            <li>
+                                <a href="/presentation">Presentation</a>
+                            </li>
+                            <li>
+                                <a href="/tools">Tools<span class="badge" id="new_blog_count"></span></a>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                </div>
+                <!--/.navbar-collapse -->
+            </div>
+        </nav>
+        <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+    </header>
+{% endblock %}
+{% block content %}
+    <div class="docs container">
+
+        <!-- Table of Contents -->
+        <!--左边框-->
+        <div class="col-md-3 col-lg-3 site-toc-container">
+            <ul class="site-toc">
+
+
+                <li>
+
+                    <span class="toc-section-heading" >
+                Introduction
+            </span>
+
+
+
+
+
+
+                    <ul class="site-toc">
+
+
+                        <li>
+
+                            <a class="" href="/overview">
+                Overview
+            </a>
+
+
+
+
+
+
+
+                        </li>
+
+                    </ul>
+
+
+                </li>
+
+
+                <li>
+
+                    <span class="toc-section-heading">
+                Homeworks
+            </span>
+
+
+
+
+
+
+                    <ul class="site-toc">
+
+
+                        <li>
+
+                            <a class="" href="/presentation#hw1">
+                Homework 1
+            </a>
+
+
+
+
+
+
+
+                        </li>
+
+
+                        <li>
+
+                            <a class="" href="/presentation#hw2">
+                Homework 2
+            </a>
+
+
+
+
+
+
+
+                        </li>
+
+
+                        <li>
+
+                            <a class="" href="/presentation#hw3">
+                Homework 3
+            </a>
+
+
+
+
+
+
+
+                        </li>
+
+
+                        <li>
+                          <a class="" href="/presentation#hw4">
+                        Homework 4
+                        </a>
+
+
+
+
+
+
+                            </ul>
+
+
+                        </li>
+
+                        <li>
+
+                            <span class="toc-section-heading">
+                        Tools
+                    </span>
+
+
+
+
+
+
+                            <ul class="site-toc">
+
+
+                                <li>
+
+                                    <a class="" href="/tools#table">
+                        Table
+                    </a>
+
+
+
+
+
+
+
+                                </li>
+
+
+                                <li>
+
+                                    <a class="" href="/tools#pie">
+                        Pie Chart
+                    </a>
+
+
+
+
+
+
+
+                                </li>
+
+
+                                <li>
+
+                                    <a class="" href="https://cordova.apache.org/docs/en/latest/guide/support/index.html">
+                        Scatter Plot
+                    </a>
+
+
+
+
+
+
+
+                                </li>
+
+
+                                <li>
+                                  <a class="" href="https://cordova.apache.org/docs/en/latest/guide/support/index.html">
+                                More Charts
+                                </a>
+
+
+
+
+
+
+                                    </ul>
+
+
+                                </li>
+
+
+
+
+
+                    </ul>
+
+
+                </li>
+
+
+
+
+
+            </ul>
+
+        </div>
+
+
+
+
+
+
+
+
+
+        <!-- Page content -->
+        <div class="col-md-9 col-md-offset-3 page-content-container container">
+            <div class="page-content row">
+                <div class="col-md-offset-1 col-md-10">
+
+
+
+
+
+
+
+
+                    <!-- Show warnings for special versions -->
+                    <!-- dev warning -->
+
+
+                    <!-- outdated warning -->
+
+
+                    <!-- plugin version warning -->
+
+
+                    <div id="page-toc-source">
+                        <div class="home">
+
+                            <a class="fragment-anchor" id="introduction"></a>
+                            <h1>Introduction</h1>
+                            <ul>
+
+
+
+
+
+                                <li>
+                                    <a class="fragment-anchor" id="overview"></a>
+                                    <h2><a href="/overview">Overview</a><a class="header-link" href="https://cordova.apache.org/docs/en/latest/#overview"><i class="glyphicon glyphicon-link"></i></a></h2>
+                                    <span class="summary">Start here if you are new to StatiipPlatform.[implemented by python]</span>
+                                </li>
+
+                            </ul>
+
+
+
+
+
+
+                            <a class="fragment-anchor" id="homeworks"></a>
+                            <h1>Homeworks<a class="header-link" href="/homeworks"></a></h1>
+                            <ul>
+
+
+
+
+
+                                <li>
+                                    <a class="fragment-anchor" id="create-your-first-app"></a>
+                                    <h2><a href="/hw1">Homework 1</a><a class="header-link" href="/hw1"><i class="glyphicon glyphicon-link"></i></a></h2>
+                                    <span class="summary">A simple spam email classifier using Naïve Bayes.</span>
+                                </li>
+
+
+
+
+
+                                <li>
+                                    <a class="fragment-anchor" id="templates-for-apps"></a>
+                                    <h2><a href="/hw2">Homework 2</a><a class="header-link" href="hw2"><i class="glyphicon glyphicon-link"></i></a></h2>
+                                    <span class="summary">A text classifier based on EM algorithm.</span>
+                                </li>
+
+
+
+
+
+                                <li>
+                                    <a class="fragment-anchor" id="platform-support"></a>
+                                    <h2><a href="/h3">Homework 3</a><a class="header-link" href="http://hw3"><i class="glyphicon glyphicon-link"></i></a></h2>
+                                    <span class="summary">HMM for Chinese Segmentation and Time Series Prediction.</span>
+                                </li>
+
+
+
+
+
+
+
+
+                                <li>
+                                    <a class="fragment-anchor" id="manage-versions-and-platforms"></a>
+                                    <h2><a href="/hw4">Homework 4</a><a class="header-link" href="http://h4"><i class="glyphicon glyphicon-link"></i></a></h2>
+                                    <span class="summary">CRF.</span>
+                                </li>
+
+
+
+
+                            </ul>
+
+                            <a class="fragment-anchor" id="homeworks"></a>
+                            <h1>Tools<a class="header-link" href="/tools"></a></h1>
+                            <ul>
+
+
+
+
+
+                                <li>
+                                    <a class="fragment-anchor" id="table"></a>
+                                    <h2><a href="/tools#table">Table</a></h2>
+                                    <span class="summary">A table to demonstrate uploaded data.</span>
+                                </li>
+
+
+
+
+
+                                <li>
+                                    <a class="fragment-anchor" id="pie"></a>
+                                    <h2><a href="/tools#pie">Pie Chart</a></h2>
+                                    <span class="summary">A simple pie chart tool.</span>
+                                </li>
+
+
+
+
+
+                                <li>
+                                    <a class="fragment-anchor" id="platform-support"></a>
+                                    <h2><a href="/tools#scatter">Scatter Plot</a></h2>
+                                    <span class="summary"> A simple scatterplot tool.</span>
+                                </li>
+
+
+
+
+
+
+
+
+                                <li>
+                                    <a class="fragment-anchor" id="manage-versions-and-platforms"></a>
+                                    <h2><a href="/tools#more">More charts</a></h2>
+                                    <span class="summary">ToBeContinue.</span>
+                                </li>
+
+
+
+
+                            </ul>
+
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="blue-divider"></div>
+                <footer>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <h1>Resources</h1>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <h2>Libraries</h2>
+                                        <ul class="nav">
+                                            <li>
+                                                <a target="_blank" href="http://getbootstrap.com/">Bootstrap</a>
+                                            </li>
+                                            <li>
+                                                <a href="http://d3js.org/">D3.js</a>
+                                            </li>
+                                            <li>
+                                                <a target="_blank" href="http://echarts.baidu.com/">ECharts</a>
+                                            </li>
+                                            <li>
+                                                <a href="http://www.chartjs.org/">Chartjs</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <h2>Materials</h2>
+                                        <ul class="nav">
+                                            <li><a target="_blank" href="">Source Code</a></li>
+                                            <li><a target="_blank" href="">Datasets </a></li>
+                                            <li><a target="_blank" href="">Class Documents</a></li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <h1>Contribute</h1>
+                                <p style="padding-top:20px"><strong>Help StatiipPlatform move forward!</strong></p>
+                                <p>Report bugs, improve the docs, or contribute to the code.</p>
+                                <a href="mailto:luying14@fudan.edu.cn" class="btn btn-lg btn-primary">
+            Contact Me
+        </a>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </footer>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
