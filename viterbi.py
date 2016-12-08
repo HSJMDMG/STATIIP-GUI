@@ -4,7 +4,7 @@ import prob_emit as emit
 import re
 
 def textParse(file):
-    print file[0]
+    #print file[0]
     #file = file.decode('gbk')
     file = file.strip().decode('gbk')
     p2 = re.compile(ur'[^\u4e00-\u9fa5]')

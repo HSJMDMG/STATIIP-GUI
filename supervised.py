@@ -147,7 +147,7 @@ def viterbi(file, start, trans, emit):
             t -= 1
 
 
-        print >>fl, slabel.encode('utf-8')
+        #print >>fl, slabel.encode('utf-8')
 
 
         for i in range(totword):
@@ -157,17 +157,15 @@ def viterbi(file, start, trans, emit):
         str += '/'
 
 
-    print >>fo,  str.encode('utf-8')
+    return str
 
-def cut(start, trans, emit,file):
-    for subfile in file:
-        viterbi(subfile, start, trans, emit)
+def cut(start, trans, emit,wholefile):
+    return viterbi(wholefile, start, trans, emit)
 
-
-def work(file):
+def work(wholefile):
     train_data = get_data()
     start, trans, emit = train(train_data)
-    cut(start, trans, emit,file)
+    return cut(start, trans, emit, wholefile)
 
 #    print_parameter(start, trans, emit)
 #    classify(start, trans, emit)
@@ -176,6 +174,3 @@ def work(file):
 #    file = open(filename)
 #    for subfile in file:
 #        work(subfile)
-
-
-work(file);
