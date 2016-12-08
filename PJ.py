@@ -13,6 +13,6 @@ def work():
     writer.writerows(data)
     csvfile.close()
 
-def hw3Chinese(data):
-    result = u'你好, ' + data;
+def hw3Chinese(data, choicestr):
+    result = u'你好, ' + choicestr + data;
     return result
