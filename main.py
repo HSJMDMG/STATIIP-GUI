@@ -22,7 +22,7 @@ def presentation(hwname=None):
     if (hwname == None):
         return render_template('presentation.html')
     else:
-        return render_template( hwname + '-1.html')
+        return render_template( hwname + '.html')
 
 
 @app.route('/hello/')
@@ -49,8 +49,8 @@ def post_text():
     if (len(request.form['content']) < 3):
         return render_template('hw3.html', inputData = request.form['content'], alertbar = 2)
 
-    result = hw3Chinese(request.form['content'], request.form['wordchoice']);
-    return render_template('hw3-1.html', inputData = request.form['content'], resultData = result , alertbar = 1)
+    result = hw3Chinese(request.form['content'].encode('gbk'), request.form['wordchoice']);
+    return render_template('hw3.html', inputData = request.form['content'], resultData = result , alertbar = 1)
 
 
 
@@ -66,11 +66,11 @@ def upload_file():
         f = request.files['filecontent']
         f.save('static/uploads/data.txt')
         inputData = open("static/uploads/data.txt").read()
-        print type(inputData)
-        result = hw3Chinese(inputData.decode('gbk'), request.form['wordchoice']);
+
+        result = hw3Chinese(inputData, request.form['wordchoice']);
 
 
-    return render_template('hw3-1.html', resultData = result , alertbar = 1)
+    return render_template('hw3.html', resultData = result , alertbar = 1)
 
     # success = 1; fail = 2
 #    f = request.files['the_file'];

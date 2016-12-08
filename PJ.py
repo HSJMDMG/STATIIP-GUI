@@ -1,6 +1,8 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 import csv
+import viterbi
+import supervised
 def work():
     csvfile = file('static/data.csv', 'wb')
     writer = csv.writer(csvfile)
@@ -14,5 +16,7 @@ def work():
     csvfile.close()
 
 def hw3Chinese(data, choicestr):
-    result = u'你好, ' + choicestr + data;
-    return result
+    if (choicestr[0] == 'v'):
+        return viterbi.work(data)
+    else:
+        return supervised.work(data)
