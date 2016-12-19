@@ -190,7 +190,10 @@
                             <h1 >Homework 1</h1>
                             <ul>
                               <h2><a>Naïve Bayes Classifier</a></h2><a class="header-link" href=""></a>
-                              <div class="description"></div>
+                              <div class="description">
+                                <p>This is a simple implementation of a <strong>Naïve Bayes</strong> classifier for <strong>spam testing</strong>.</p>
+                                <p>Datasets: email(toy dataset), CSDMC2010_SPAM</p>
+                              </div>
                               <h2><a>Results</a></h2>
                               <a href = "/presentation/hw1"><button class = "btn btn-info"> Visualization </button></a>
 
@@ -203,11 +206,16 @@
                           <div id="hw2">
                           <h1 >Homework 2</h1>
                           <ul>
-                            <h2><a>EM algorithm</a></h2><a class="header-link" href=""></a>
-                            <div class="description"></div>
+                            <h2><a>EM algorithm</a></h2>
+                            <div class="description">
+                              <p>This is a simple implementation of a classifier based on <strong>Naïve Bayes</strong> and <strong>EM</strong> algorithm.</p>
+                              <p>Datasets: WebKB, 20NG, R8, R52</p>
 
-                            <h2><a>Results</a></h2><a class="header-link" href="">1.把EM的两张图直接放一下 2.把EM的图重新用前端画一下(option)</a>
-                            <div class="vis" id = "vis2"></div>
+                            </div>
+
+                            <h2><a>Results</a></h2>
+                            <a href = "/presentation/hw2"><button class = "btn btn-info"> Visualization </button></a>
+                            <div class = "hidden">1.把EM的两张图直接放一下 2.把EM的图重新用前端画一下(option)</div>
                           </ul>
                         </div>
 
@@ -217,9 +225,12 @@
                         <h1 >Homework 3</h1>
                         <ul>
                           <h2><a>HMM model</a></h2><a class="header-link" href=""></a>
-                          <div class="description"></div>
+                          <div class="description">
+                            <p>This <strong>HMM</strong> based project include two subprojects: <strong>chinese segmentation</strong> and <strong>stock prediction</strong>.</p>
+                            <p>Datasets: pku_training, sp500</p>
+                          </div>
                           <h2><a>Results</a></h2>
-                          <a href = "/presentation/hw3"><button class = "btn btn-info"> Visualization </button></a> 
+                          <a href = "/presentation/hw3"><button class = "btn btn-info"> Visualization </button></a>
 
                         </ul>
                       </div>
@@ -229,13 +240,16 @@
                       <h1 >Homework 4</h1>
                       <ul>
                         <h2><a>CRF model</a></h2><a class="header-link" href=""></a>
-                        <div class="description"></div>
+                        <div class="description">
+                          <p>This is a <strong>chinese segmentation</strong> project based on <strong>CRF</strong> model. </p>
+                          <p>Datasets:  </p>
+                        </div>
 
                         <h2><a>Results</a></h2><a class="header-link" href=""></a>
-                        <div class="vis" id = "vis4"></div>
+                        <a href = "/presentation/hw4"><button class = "btn btn-info"> Visualization </button></a>
 
 
-                        <div>1.直接用HMM的前端；2.显示切词结果显示BMES标记（option）3.显示实验数据的结果（precision/recall的表格）（option）</div>
+                        <div class = "hidden">1.直接用HMM的前端；2.显示切词结果显示BMES标记（option）3.显示实验数据的结果（precision/recall的表格）（option）</div>
                       </ul>
                       </div>
 
@@ -310,7 +324,6 @@
 
 {% endblock %}
 {% block script %}
-<script src="../static/libs/d3.min.js"></script>
-<script src="../static/libs/echarts.min.js"></script>
-<script src="../static/src/content.js"></script>
+
+
 {% endblock %}

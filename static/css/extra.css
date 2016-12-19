@@ -14,10 +14,19 @@
 
 .vis {
 width: 800px;
-height:600px;
+height:auto;
 }
 
 .pic {
 width: 400px;
-height:100px;
+height: auto;
+}
+
+.comment {
+	display: none;
+}
+
+img {
+
+	
 }
