@@ -29,12 +29,13 @@
                           <li>
                               <a href="/">Home</a>
                           </li>
-                            <li>
+                            <li class = "active">
                                 <a href="/guide">Guide</a>
                             </li>
-                            <li class = "active">
+                            <li >
                                 <a href="/presentation">Presentation</a>
                             </li>
+
                             <!--
                             <li>
                                 <a href="/tools">Tools</a>
@@ -61,96 +62,24 @@
 
 
 
-
+                        <a href="/presentation">
                             <span class="toc-section-heading">
-                        Homework
+                        Introduction
+
                     </span>
-
-
-
-
-
-
-                            <ul class="site-toc">
-
-
-                                <li>
-
-                                    <a  href="#hw1">
-                      1. Naïve Bayes Classifier
                     </a>
 
 
 
+                        <ul class="site-toc">
+                            <li>
 
 
-
-
-
-
-
-                                </li>
-
-
-                                <li>
-
-                                    <a class="" href="#hw2">
-                        2. EM algorithm
-                    </a>
-
-
-
-
-
-
-
-                                </li>
-
-
-                                <li>
-
-                                    <a class="" href="#hw3">
-                        3. HMM model
-                    </a>
-
-
-
-
-
-
-
-                                </li>
-
-
-                                <li>
-                                  <a class="" href="#hw4">
-                                4. CRF model
+                                <a  class = "active" href = "/overview">
+                                        1. overview
                                 </a>
-
-
-
-
-
-
-
-
-
-                                </li>
-
-
-
-
-
+                      </li>
                     </ul>
-
-
-
-
-
-
-
-
-            </ul>
 
         </div>
 
@@ -187,75 +116,27 @@
                     <div id="page-toc-source">
                         <div class="home">
 
-                            <div id="hw1">
-                            <h1 >Homework 1</h1>
+                            <div id="overview">
+                            <h1 >Overview</h1>
+                            <p>This is a simple and naive GUI for class STATIIP to present the results of homework projects.</p>
+                            <p>All the website is built under Flask frame using Python. Several javascript libraries are adopted for better visualization effects.</p>
+                            <p>All the homework projects are written in Python, and there might exist tons of bugs in these codes. Therefore please feel free to click the contact me button in footnote and report the bugs.</p>
+
+
                             <ul>
-                              <h2><a>Naïve Bayes Classifier</a></h2><a class="header-link" href=""></a>
-                              <div class="description">
-                                <p>This is a simple implementation of a <strong>Naïve Bayes</strong> classifier for <strong>spam testing</strong>.</p>
-                                <p>Datasets: email(toy dataset), CSDMC2010_SPAM</p>
-                              </div>
-                              <h2><a>Results</a></h2>
-                              <a href = "/presentation/hw1"><button class = "btn btn-info"> Visualization </button></a>
+                              <h2><a href = "/">Home</a></h2><a href=""></a>
+                              <p>The home page of the website</p>
+
+
+                              <h2><a href = "guide">Guide</a></h2>
+                              <p>A Guide for you to better navigate all the homework projects</p>
+
+                              <h2><a href = "presentation">Presentation</a></h2>
+                              <p>Visualization entrance for all the homwork projects</p>
+
 
                             </ul>
                           </div>
-
-
-
-
-                          <div id="hw2">
-                          <h1 >Homework 2</h1>
-                          <ul>
-                            <h2><a>EM algorithm</a></h2>
-                            <div class="description">
-                              <p>This is a simple implementation of a classifier based on <strong>Naïve Bayes</strong> and <strong>EM</strong> algorithm.</p>
-                              <p>Datasets: WebKB, 20NG, R8, R52</p>
-
-                            </div>
-
-                            <h2><a>Results</a></h2>
-                            <a href = "/presentation/hw2"><button class = "btn btn-info"> Visualization </button></a>
-                            <div class = "hidden">1.把EM的两张图直接放一下 2.把EM的图重新用前端画一下(option)</div>
-                          </ul>
-                        </div>
-
-
-
-                        <div id="hw3">
-                        <h1 >Homework 3</h1>
-                        <ul>
-                          <h2><a>HMM model</a></h2><a class="header-link" href=""></a>
-                          <div class="description">
-                            <p>This <strong>HMM</strong> based project include two subprojects: <strong>chinese segmentation</strong> and <strong>stock prediction</strong>.</p>
-                            <p>Datasets: pku_training, sp500</p>
-                          </div>
-                          <h2><a>Results</a></h2>
-                          <a href = "/presentation/hw3"><button class = "btn btn-info"> Visualization </button></a>
-
-                        </ul>
-                      </div>
-
-
-                      <div id="hw4">
-                      <h1 >Homework 4</h1>
-                      <ul>
-                        <h2><a>CRF model</a></h2><a class="header-link" href=""></a>
-                        <div class="description">
-                          <p>This is a <strong>chinese segmentation</strong> project based on <strong>CRF</strong> model. </p>
-                          <p>Datasets:  </p>
-                        </div>
-
-                        <h2><a>Results</a></h2><a class="header-link" href=""></a>
-                        <a href = "/presentation/hw4"><button class = "btn btn-info"> Visualization </button></a>
-
-
-                        <div class = "hidden">1.直接用HMM的前端；2.显示切词结果显示BMES标记（option）3.显示实验数据的结果（precision/recall的表格）（option）</div>
-                      </ul>
-                      </div>
-
-
-
 
 
 
@@ -325,6 +206,11 @@
 
 {% endblock %}
 {% block script %}
+<script src="../static/libs/d3.min.js"></script>
+<script src="../static/libs/echarts-all.js"></script>
+<script src="../static/libs/Chart.bundle.min.js"></script>
+
+<script src="../static/src/content.js"></script>
 
 
 {% endblock %}
