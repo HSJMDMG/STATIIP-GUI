@@ -190,10 +190,82 @@
                             <h1 >Homework 1</h1>
                             <ul>
                               <h2><a>Naïve Bayes Classifier</a></h2><a class="header-link" href=""></a>
-                              <h2><a>Visualization</a></h2><a class="header-link" href="">把表格用前端展示一下(option)</a>
-                              <div class="vis" id = "vis1">
+
+                              <div id="vis1spam">
+
+                                  {% if alertbar == 1 %}
+                                  <div>
+                                      <div class="alert alert-success"><button type="button" class="close" data-dismiss="alert">×</button>
+                                          <h4>This is a normal email.</h4>
+
+                                      </div>
+                                  </div>
+                                  {% endif%}
+                                  {% if alertbar == 0 %}
+                                  <div>
+                                      <div class="alert alert-danger"><button type="button" class="close" data-dismiss="alert">×</button>
+                                          <h4>Sorry！</h4>
+                                          <p>This is a spam email.</p>
+                                      </div>
+                                  </div>
+                                  {% endif%}
+
+                                  <div class="container">
+                                      <div class="row">
+                                          <div class="col-xs-4">
+                                              <form role="form" action="/hw1text" method="post">
+                                                  <div class="form-group"><label for="inputdata">Text input</label>
+                                                      <textarea id='inputdata' name="content" class="form-control" rows="8" placeholder="Enter input data and Click `Submit` button.">{{ inputData }}</textarea>
+
+
+                                                      <label>Training Set</label> <br>
+                                                      <label class="radio-inline">
+                                                      <input type="radio" name="wordchoice" id="inlineRadio1" value="email" checked>email
+                                                    </label>
+                                                      <label class="radio-inline">
+                                                        <input type="radio"name="wordchoice" id="inlineRadio2" value="csdmc2010">CSDMC2010
+                                                    </label> <br>
+
+                                                      <button type="submit" class="btn btn-default">Submit</button></div>
+                                              </form>
+                                          </div>
+
+
+                                              <div class="col-xs-4">
+                                              <form role="form" action="/hw1file" method="post" enctype="multipart/form-data">
+                                                  <label for="inputfile">File input</label>
+                                                  <input type="file" id="inputfile" name="filecontent">
+
+                                                  <label>Training Set</label> <br>
+                                                  <label class="radio-inline">
+                                                <input type="radio" name="wordchoice" id="inlineRadio3" value="email" checked>email
+                                              </label>
+                                                  <label class="radio-inline">
+                                                  <input type="radio"name="wordchoice" id="inlineRadio4" value="csdmc2010">CSDMC2010
+                                              </label> <br>
+
+                                                  <button type="submit" class="btn btn-default">Submit</button>
+                                              </form>
+                                            </div>
+
+
+
+
+
+                                      </div>
+                                  </div>
+
 
                               </div>
+
+
+
+
+
+
+
+                              <h2><a>Visualization</a></h2><a class="header-link" href="">把表格用前端展示一下(option)</a>
+                              <img src="../static/pic/hw1table.png" width="800" height="auto" alt="Three Hidden States" />
                             </ul>
                           </div>
 

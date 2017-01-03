@@ -3,6 +3,9 @@
 import csv
 import viterbi
 import supervised
+import hw1Small
+import hw1Large
+
 def work():
     csvfile = file('static/data.csv', 'wb')
     writer = csv.writer(csvfile)
@@ -20,3 +23,9 @@ def hw3Chinese(data, choicestr):
         return viterbi.work(data)
     else:
         return supervised.work(data)
+
+def hw1NB(data, choicestr):
+    if (choicestr[0] == 'e'):
+        return hw1Small.SpamTest(data)
+    else:
+        return hw1Large.SpamTest(data)

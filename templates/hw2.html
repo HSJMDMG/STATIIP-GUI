@@ -1,0 +1,285 @@
+{% extends "basic.html" %}
+{% block title %}
+    <title>
+        Presentation - StatiipPlatform
+    </title>
+{% endblock %}
+{% block header %}
+    <header>
+        <a class="scroll-point pt-top" name="top"></a>
+        <nav class="navbar navbar-inverse navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+
+              <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="/"><img id="logo_top" src="../static/logo/cordova-logo-newbrand.svg"></a>
+              </div>
+
+
+    </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <div class="nav_bar_center">
+                        <!-- 最上面的一条框-->
+                        <ul class="nav navbar-nav">
+                          <li>
+                              <a href="/">Home</a>
+                          </li>
+                            <li>
+                                <a href="/guide">Guide</a>
+                            </li>
+                            <li class = "active">
+                                <a href="/presentation">Presentation</a>
+                            </li>
+                            <li>
+                                <a href="/tools">Tools</a>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                </div>
+                <!--/.navbar-collapse -->
+            </div>
+        </nav>
+        <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+    </header>
+{% endblock %}
+{% block content %}
+    <div class="docs container">
+
+        <!-- Table of Contents -->
+        <!--左边框-->
+        <div class="col-md-3 col-lg-3 site-toc-container">
+            <ul class="site-toc">
+
+
+
+
+                        <a href="/presentation">
+                            <span class="toc-section-heading">
+                        Homework
+                    </span>
+                    </a>
+
+
+
+
+
+                            <ul class="site-toc">
+
+
+                                <li>
+
+                                    <a  class = "active" href = "/presentation#hw1">
+                      1. Naïve Bayes Classifier
+                    </a>
+
+
+
+
+
+
+
+
+
+
+                                </li>
+
+
+                                <li>
+
+                                    <a class="" href = "/presentation#hw2">
+                        2. EM algorithm
+                    </a>
+
+
+
+
+
+
+
+                                </li>
+
+
+                                <li>
+
+                                    <a class="" href = "/presentation#hw3">
+                        3. HMM model
+                    </a>
+
+
+
+
+
+
+
+                                </li>
+
+
+                                <li>
+                                  <a class="" href = "/presentation#hw4">
+                                4. CRF model
+                                </a>
+
+
+
+
+
+
+
+
+
+                                </li>
+
+
+
+
+
+                    </ul>
+
+
+
+
+
+
+
+
+            </ul>
+
+        </div>
+
+
+
+
+
+
+
+
+
+        <!-- Page content -->
+        <div class="col-md-9 col-md-offset-3 page-content-container container">
+            <div class="page-content row">
+                <div class="col-md-offset-1 col-md-10">
+
+
+
+
+
+
+
+
+                    <!-- Show warnings for special versions -->
+                    <!-- dev warning -->
+
+
+                    <!-- outdated warning -->
+
+
+                    <!-- plugin version warning -->
+
+
+                    <div id="page-toc-source">
+                        <div class="home">
+
+                            <div id="hw2">
+                            <h1 >Homework 2</h1>
+                            <ul>
+                              <h2><a>EM algorithm</a></h2><a class="header-link" href=""></a>
+                              <p>This is a simple implementation of a classifier based on Naïve Bayes and EM algorithm.</p>
+
+                              <p>Datasets: WebKB, 20NG, R8, R52</p>
+                              <h2><a>Visualization</a></h2><a class="header-link" href="">把表格用前端展示一下(option)</a>
+
+                              <div class="vis" id = "vis2news"  style="height:400px" >
+
+                              </div>
+
+
+                              <div class="vis" id = "vis2webkB"  style="height:400px" >
+
+                              </div>
+
+                            </ul>
+                          </div>
+
+
+
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="blue-divider"></div>
+                <footer>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <h1>Resources</h1>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <h2>Libraries</h2>
+                                        <ul class="nav">
+                                            <li>
+                                                <a target="_blank" href="http://getbootstrap.com/">Bootstrap</a>
+                                            </li>
+                                            <li>
+                                                <a href="http://d3js.org/">D3.js</a>
+                                            </li>
+                                            <li>
+                                                <a target="_blank" href="http://echarts.baidu.com/">ECharts</a>
+                                            </li>
+                                            <li>
+                                                <a href="http://www.chartjs.org/">Chartjs</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <h2>Materials</h2>
+                                        <ul class="nav">
+                                            <li><a target="_blank" href="">Source Code</a></li>
+                                            <li><a target="_blank" href="">Datasets </a></li>
+                                            <li><a target="_blank" href="">Class Documents</a></li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <h1>Contribute</h1>
+                                <p style="padding-top:20px"><strong>Help StatiipPlatform move forward!</strong></p>
+                                <p>Report bugs, improve the docs, or contribute to the code.</p>
+                                <a href="mailto:luying14@fudan.edu.cn" class="btn btn-lg btn-primary">
+            Contact Me
+        </a>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </footer>
+
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
+{% block script %}
+<script src="../static/libs/d3.min.js"></script>
+<script src="../static/libs/echarts-all.js"></script>
+<script src="../static/libs/Chart.bundle.min.js"></script>
+
+<script src="../static/src/content.js"></script>
+
+
+{% endblock %}

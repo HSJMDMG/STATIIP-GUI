@@ -40,7 +40,7 @@ def tools():
 
 
 @app.route('/hw3text', methods=['POST'])
-def post_text():
+def post_text3():
     # success = 1; fail = 2
 #    f = request.files['the_file'];
 
@@ -52,16 +52,8 @@ def post_text():
     result = hw3Chinese(request.form['content'].encode('gbk'), request.form['wordchoice']);
     return render_template('hw3.html', inputData = request.form['content'], resultData = result , alertbar = 1)
 
-
-
-#def upload_file():
-#    if request.method == 'POST':
-#        f = request.files['the_file']
-#        f.save('/var/www/uploads/' + secure_filename(f.filename))
-
-
 @app.route('/hw3file', methods=['GET', 'POST'])
-def upload_file():
+def upload_file3():
     if request.method == 'POST':
         f = request.files['filecontent']
         f.save('static/uploads/data.txt')
@@ -71,6 +63,31 @@ def upload_file():
 
 
     return render_template('hw3.html', resultData = result , alertbar = 1)
+
+
+
+
+@app.route('/hw1text', methods=['POST'])
+def post_text1():
+
+    result = hw1NB(request.form['content'], request.form['wordchoice']);
+    return render_template('hw1.html', alertbar = result)
+
+@app.route('/hw1file', methods=['GET', 'POST'])
+def upload_file1():
+    if request.method == 'POST':
+        f = request.files['filecontent']
+        #print f
+        f.save('static/uploads/data.txt')
+        inputData = open("static/uploads/data.txt").read()
+        #print inputData
+        result = hw1NB(inputData, request.form['wordchoice']);
+        #print result
+        return render_template('hw1.html', alertbar = result)
+
+
+
+
 
     # success = 1; fail = 2
 #    f = request.files['the_file'];
