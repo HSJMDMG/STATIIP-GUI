@@ -228,7 +228,7 @@
 
 
                               <h2><a>Visualization</a></h2><a class="header-link" href="">把表格用前端展示一下(option)</a>
-                              <div class="vis" id = "vis4">
+                              <div class="vis" id = "vis4" style="height:400px">
 
                               </div>
                             </ul>
@@ -304,5 +304,61 @@
 {% block script %}
 <script src="../static/libs/d3.min.js"></script>
 <script src="../static/libs/echarts.min.js"></script>
-<script src="../static/src/content.js"></script>
+<script>
+
+var option = {
+  tooltip: {
+      trigger: 'axis'
+  },
+  toolbox: {
+      feature: {
+          dataView: {show: true, readOnly: false},
+          magicType: {show: true, type: ['line', 'bar']},
+          restore: {show: true},
+          saveAsImage: {show: true}
+      }
+  },
+  legend: {
+      data:['Precision','Recall','F score']
+  },
+  xAxis: [
+      {
+          type: 'category',
+          data: ['no_6', 'no_10', 'no_12', 'no_bi_6', 'pos_7', 'pos_9', 'pos_10','pos_12', 'pos_bi_7']
+      }
+  ],
+  yAxis: [
+      {
+          type: 'value',
+          name: 'rate',
+          min: 0.9,
+          max: 1.0,
+          //interval: 50,
+      },
+  ],
+  series: [
+      {
+          name:'Precision',
+          type:'bar',
+          data:[0.945496, 0.949939, 0.949903, 0.949138, 0.985380, 0.985338, 0.984975, 0.993512, 0.985414]
+      },
+      {
+          name:'Recall',
+          type:'bar',
+          data:[0.933318, 0.941478, 0.942060, 0.940195, 0.983944, 0.983711, 0.983779, 0.992132, 0.983672]
+      },
+      {
+          name:'F score',
+          type:'bar',
+          
+          data:[0.939368, 0.945689, 0.945965, 0.944646, 0.984661, 0.984524, 0.984376, 0.992822, 0.984542]
+      }
+  ]
+};
+
+var  myChart = echarts.init(document.getElementById("vis4"));
+myChart.setOption(option);
+
+
+</script>
 {% endblock %}
