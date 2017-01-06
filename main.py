@@ -76,7 +76,7 @@ def post_text4():
     if (len(request.form['content']) < 3):
         return render_template('hw4.html', inputData = request.form['content'], alertbar = 2)
 
-    result = hw3Chinese(request.form['content'].encode('gbk'));
+    result = hw4Seg(request.form['content'].encode('gbk'));
     return render_template('hw4.html', inputData = request.form['content'], resultData = result , alertbar = 1)
 
 @app.route('/hw4file', methods=['GET', 'POST'])
@@ -86,7 +86,7 @@ def upload_file4():
         f.save('static/uploads/data.txt')
         inputData = open("static/uploads/data.txt").read()
 
-        result = hw3Chinese(inputData);
+        result = hw4Seg(inputData);
 
 
     return render_template('hw4.html', resultData = result , alertbar = 1)
